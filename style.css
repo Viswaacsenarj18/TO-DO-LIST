@@ -1,94 +1,102 @@
-/* Base styles */
+/* Reset default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fullscreen gradient background */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, blue, rgb(220, 8, 149));
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, blue, rgb(220, 8, 149));
+  background-size: cover;
+  background-position: center;
 }
 
+/* Main container */
 .container {
-    width: 90%;
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
+/* Heading */
 h2 {
-    color: blue;
+  color: blue;
+  margin-bottom: 15px;
 }
 
+/* Input field */
 input {
-    width: 70%;
-    padding: 10px;
-    border: 2px solid #ff6f61;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ff6f61;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  outline: none;
 }
 
+/* Add button */
 button {
-    padding: 10px;
-    background: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background: #ff6f61;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+/* Task list styles */
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
 }
 
 li {
-    background: #e5e3de;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: #e5e3de;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Delete button */
 .delete {
-    background: #ff4757;
-    border: none;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+  background: #ff4757;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Responsive for mobile devices */
-@media only screen and (max-width: 600px) {
-    .container {
-        padding: 15px;
-    }
+/* Responsive - Mobile First */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
 
-    input {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    button {
-        width: 100%;
-    }
-
-    li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .delete {
-        margin-top: 5px;
-        align-self: flex-end;
-    }
+  .delete {
+    margin-top: 5px;
+    align-self: flex-end;
+  }
 }
