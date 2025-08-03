@@ -1,18 +1,22 @@
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
-    margin: 300px;
-    background: linear-gradient(135deg,blue,rgb(220, 8, 149));
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, blue, rgb(220, 8, 149));
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 .container {
+    width: 90%;
     max-width: 400px;
     background: white;
-    
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
@@ -62,14 +66,10 @@ li {
     border-radius: 5px;
     cursor: pointer;
 }
-/* Small devices (phones, 320px–600px) */
-@media only screen and (max-width: 600px) {
-    body {
-        margin: 50px 10px;
-    }
 
+/* Responsive for mobile devices */
+@media only screen and (max-width: 600px) {
     .container {
-        width: 100%;
         padding: 15px;
     }
 
@@ -92,32 +92,3 @@ li {
         align-self: flex-end;
     }
 }
-
-/* Medium devices (tablets, 601px–900px) */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-    body {
-        margin: 100px auto;
-    }
-
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    input {
-        width: 65%;
-    }
-
-    button {
-        width: 30%;
-    }
-}
-
-/* Large devices (desktops, 901px and up) */
-@media only screen and (min-width: 901px) {
-    .container {
-        width: 400px;
-    }
-}
-
-
